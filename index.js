@@ -155,9 +155,46 @@ let ques = {
   }
 }
 
+//3
+
+let vowel = Array.from("aeiou")
+console.log(vowel) // ['a', 'e', 'i', 'o', 'u']
+
+let vowel = Array.of("aeiou") // ['aeiou']
+for (let i = 0; i < vowel.length; i++){
+  console.log(vowel[i]) // aeiou
+}
+
+let vowel = "aeiou"
+for (let i = 0; i < vowel.length; i++){
+  console.log(vowel[i])
+}
+// a e i o u
+
+let vowel = Array.from("aeiou")
+for (let i = 0; i < vowel.length; i++){
+  console.log(vowel[i])// a e i o u
+}
 
 
+//4
+
+// static methods always attached with the class not the instance
+
+class RainForest{
+  static minimumRainfall = 60
+}
+let congo = new RainForest()
+RainForest.minimumRainfall = 80
+console.log(RainForest.minimumRainfall) // 80
+console.log(congo.minimumRainfall) // undefined
 
 
+// Generators are function executions that can be suspended and resumed at a later point. Generators are useful when carrying out concepts such as ‘lazy execution’. This basically means that by suspending execution and resuming at will, we are able to pull values only when we need to.
 
+class X {
+  get Y() {return 42}
+}
+var x = new X()
 
+console.log(X.Y) // 42
